@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Formulaire Prise de Rendez Vous</title>
+		
+	</head>
+	<body>
+		<header>
+			<img src= "Logo AFPA.PNG" width="28%" height="15%" >
+		</header>
+		<form action="ExoPhpTrois.php" method="POST" enctype="multipart/form-data">
+			<div width="100%" style="text-align:center;margin:auto;">
+				<div align="left" style="width:50%;float:left;">
+					<input name="nom" placeholder ="Nom - Prénom" type="text">
+					<br><br><br>
+					<input name="courriel" placeholder="courriel" type = "email">
+					<br><br><br>
+					<input name="phone" placeholder="Votre téléphone" type ="tel">
+					<br><br><br>
+					
+					<select name= "système">
+						<option>Vous êtes ...</option>
+						<option> Développeur</option>
+						<option> Chef de Projet</option>
+						<option>Directeur des systèmes d'information</option>
+					</select>
+					<br><br><br><br>
+					<textarea name="txt_comm" rows="10" cols="50" placeholder="Commentaires : " ></textarea>
+					<br><br><br>
+				</div>
+				<div align="left" style="width:50%;float:left;">
+					<label for="rd_contact">Quelle est la meilleure manière de vous contacter?</label>
+					<br><br>
+					<input name="rd_contact" type = "radio" >Téléphone
+					<br>
+					<input name="rd_contact" type="radio" >Courriel
+					<br><br>
+
+					<label for="rd_jour">Jours de la semaine où vous êtes disponible : </label><br><br>
+					<input name= "ck_profil[]" type = "checkbox" value="Lundi">Lundi <br>
+					<input name= "ck_profil[]" type = "checkbox" value="Mardi">Mardi <br>
+					<input name= "ck_profil[]" type = "checkbox" value="Mercredi">Mercredi <br>
+					<input name= "ck_profil[]" type = "checkbox" value="Jeudi">Jeudi <br>
+					<input name= "ck_profil[]" type = "checkbox" value="Vendredi">Vendredi <br><br>
+
+					<label for="rd_jour">Heure appropriée pour un rendez-vous : </label><br><br>
+					<input name= "ck_moment[]" type = "checkbox" value="Matin" >Matin<br>
+					<input name= "ck_moment[]" type = "checkbox" value="Après-midi">Après-midi<br><br>	<br><br>
+					<!-- <input type="file" name="fichier"> fichier attaché à envoyer par email-->
+
+				</div>
+				
+			</div>
+			<div style="clear:both">
+				<center class ="ex1"><button type="submit" style="width:100%">Envoyer</button></center>			
+									
+			</div>
+		</form>
+	</body>
+</html>
